@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        align-items: center;
+        background: black url('./assets/img/space.webp') center no-repeat fixed;
+        background-size: cover;
+        display: flex;
+
+        justify-content: space-around;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .planet {
+        width: 80px;
+      }
+
+      @keyframes Girar {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      #earth-div {
+        animation: circle 5s linear infinite;
+        position: relative;
+      }
+
+      #earth {
+        filter: drop-shadow(0 0 5px #ccc);
+        height: 60px;
+        width: 60px;
+      }
+
+      @keyframes circle {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      #sun {
+        animation: Girar 20s linear infinite;
+        filter: drop-shadow(0 0 12px #bb0);
+        display: block;
+        width: 150px;
+      }
+
+      .moon-div,
+      .planet {
+        animation: circle 5s linear infinite;
+        position: relative;
+      }
+
+      .moon-div #moon {
+        animation: anticircle 5s linear infinite;
+        left: 0;
+        position: absolute;
+        top: -100px;
+        width: 60px;
+      }
+
+      @keyframes anticircle {
+        0% {
+          transform: rotate(360deg);
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      @media (max-width: 700px) {
+        body {
+          flex-direction: column;
+          gap: 30px;
+          justify-content: space-between;
+          padding-block: 30px;
+        }
+
+        body > * {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img id="sun" src="assets/img/sun.svg" alt="test of image" />
+
+    <img class="planet" src="assets/img/mercury.svg" alt="test of image" />
+    <img class="planet" src="assets/img/venus.svg" alt="test of image" />
+
+    <div class="moon-div">
+      <img id="earth" src="assets/img/earth.svg" alt="earth" />
+      <img id="moon" src="assets/img/full-moon.svg" alt="Moon SVG" />
+    </div>
+
+    <img class="planet" src="assets/img/mars.svg" alt="test of image" />
+
+    <img class="planet" src="assets/img/jupiter.svg" alt="test of image" />
+
+    <img class="planet" src="assets/img/saturn.svg" alt="test of image" />
+
+    <img class="planet" src="assets/img/uranus.svg" alt="test of image" />
+
+    <img class="planet" src="assets/img/neptune.svg" alt="test of image" />
+  </body>
+</html>
