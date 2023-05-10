@@ -4,25 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/vertical-alignment-solar-system.css"
+    />
     <title>Test</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        align-items: center;
-        background: black url('./assets/img/space.webp') center no-repeat fixed;
-        background-size: cover;
-        display: flex;
-
-        justify-content: space-around;
-        height: 100vh;
-        width: 100vw;
-      }
-
+    <!-- Horizontal Styles -->
+    <!-- <style>
       .planet {
         width: 80px;
       }
@@ -55,13 +44,6 @@
         100% {
           transform: rotate(360deg);
         }
-      }
-
-      #sun {
-        animation: Girar 20s linear infinite;
-        filter: drop-shadow(0 0 12px #bb0);
-        display: block;
-        width: 150px;
       }
 
       .moon-div,
@@ -100,12 +82,14 @@
           display: block;
         }
       }
-    </style>
+    </style> -->
   </head>
   <body>
+    <!-- Horizontal HTML
     <img id="sun" src="assets/img/sun.svg" alt="test of image" />
 
     <img class="planet" src="assets/img/mercury.svg" alt="test of image" />
+
     <img class="planet" src="assets/img/venus.svg" alt="test of image" />
 
     <div class="moon-div">
@@ -122,5 +106,44 @@
     <img class="planet" src="assets/img/uranus.svg" alt="test of image" />
 
     <img class="planet" src="assets/img/neptune.svg" alt="test of image" />
+    -->
+
+    <main id="solar-system">
+      <section class="solar-system__vertical-alignment">
+        <div class="vertical-alignment__circle-axis" id="mercury-axis">
+          <img src="assets/img/mercury.svg" alt="Mercury Planet" />
+        </div>
+
+        <div class="vertical-alignment__circle-axis" id="venus-axis">
+          <img src="assets/img/venus.svg" alt="Venus Planet" />
+        </div>
+
+        <div class="vertical-alignment__circle-axis" id="earth-axis">
+          <img src="assets/img/earth.svg" alt="Earth Planet" />
+        </div>
+
+        <div class="vertical-alignment__circle-axis" id="mars-axis">
+          <img src="assets/img/mars.svg" alt="Mars Planet" />
+        </div>
+
+        <div class="vertical-alignment__circle-axis" id="jupiter-axis">
+          <img src="assets/img/jupiter.svg" alt="Jupiter Planet" />
+        </div>
+
+        <div class="vertical-alignment__circle-axis" id="saturn-axis">
+          <img src="assets/img/saturn.svg" alt="Saturn Planet" />
+        </div>
+
+        <div class="vertical-alignment__circle-axis" id="uranus-axis">
+          <img src="assets/img/uranus.svg" alt="Uranus Planet" />
+        </div>
+
+        <div class="vertical-alignment__circle-axis" id="neptune-axis">
+          <img src="assets/img/neptune.svg" alt="Neptune Planet" />
+        </div>
+
+        <img id="sun" src="assets/img/sun.svg" alt="Image of a Sun" />
+      </section>
+    </main>
   </body>
 </html>

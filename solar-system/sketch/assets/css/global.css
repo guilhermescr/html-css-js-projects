@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --rotation-time: 14s;
+  --translation-time: 10s;
+}
+
+body {
+  background: black url('../img/space.webp') center no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+#solar-system {
+  height: 100%;
+  width: 100%;
+}
+
+#solar-system > section {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes sunRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#sun {
+  animation: sunRotation var(--rotation-time) linear infinite;
+  filter: drop-shadow(0 0 12px #bb0);
+  display: block;
+}
