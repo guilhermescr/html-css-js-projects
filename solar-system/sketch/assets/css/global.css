@@ -5,7 +5,7 @@
 }
 
 :root {
-  --rotation-time: 14s;
+  --rotation-time: 25s;
   --translation-time: 10s;
 }
 
@@ -41,4 +41,7 @@ body {
   animation: sunRotation var(--rotation-time) linear infinite;
   filter: drop-shadow(0 0 12px #bb0);
   display: block;
+  position: relative;
+  z-index: 10;
+  color: #89cde6;
 }
