@@ -1,0 +1,213 @@
+/* Animations */
+@keyframes floatingMovement {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.03) translate(3%, -7%);
+  }
+
+  70% {
+    transform: translate(-3%, 7%);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.solar-system__horizontal-alignment {
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+  overflow-x: auto;
+  padding-inline: 20px;
+  scroll-behavior: smooth;
+}
+
+.solar-system__horizontal-alignment > * {
+  flex-shrink: 0;
+}
+
+.solar-system__horizontal-alignment .sun {
+  width: 180px;
+}
+
+.planet-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.planet-container > img:not(#moon-box-full-moon) {
+  animation: floatingMovement var(--floating-time) linear infinite alternate;
+  filter: drop-shadow(0 0 3px var(--planet-shadow-color));
+  width: 100%;
+}
+
+#mercury-box {
+  width: 60px;
+}
+
+#mercury-box img {
+  --floating-time: 10s;
+}
+
+#venus-box {
+  width: 80px;
+}
+
+#venus-box img {
+  --floating-time: 7s;
+  --planet-shadow-color: #d88484;
+}
+
+#earth-box {
+  position: relative;
+  width: 90px;
+}
+
+#earth-box img {
+  --floating-time: 5s;
+  --planet-shadow-color: #58f558;
+}
+
+#moon-box {
+  animation: rotation360 10s linear infinite;
+  height: calc(100% + 70px);
+  width: calc(100% + 70px);
+  left: -35%;
+  position: absolute;
+  top: -35%;
+}
+
+#moon-box-full-moon {
+  filter: drop-shadow(0 0 5px #bbb);
+  width: 40px;
+}
+
+#mars-box {
+  width: 85px;
+}
+
+#mars-box img {
+  --floating-time: 14s;
+  --planet-shadow-color: #c91313;
+}
+
+#jupiter-box {
+  width: 95px;
+}
+
+#jupiter-box img {
+  --floating-time: 4s;
+  --planet-shadow-color: #991e1e;
+}
+
+#saturn-box {
+  width: 150px;
+}
+
+#saturn-box img {
+  --floating-time: 5s;
+  --planet-shadow-color: #eed814;
+}
+
+#uranus-box {
+  width: 68px;
+}
+
+#uranus-box img {
+  --floating-time: 15s;
+  --planet-shadow-color: #3290ac;
+}
+
+#neptune-box {
+  width: 83px;
+}
+
+#neptune-box img {
+  --floating-time: 17s;
+  --planet-shadow-color: #7272ff;
+}
+
+@media (max-width: 770px) {
+  .solar-system__horizontal-alignment .sun {
+    width: 120px;
+  }
+
+  #mercury-box {
+    width: 40px;
+  }
+
+  #venus-box {
+    width: 60px;
+  }
+
+  #earth-box {
+    width: 70px;
+  }
+
+  #mars-box {
+    width: 65px;
+  }
+
+  #jupiter-box {
+    width: 75px;
+  }
+
+  #saturn-box {
+    width: 130px;
+  }
+
+  #uranus-box {
+    width: 48px;
+  }
+
+  #neptune-box {
+    width: 63px;
+  }
+}
+
+@media (min-width: 1440px) and (min-height: 700px) {
+  .solar-system__horizontal-alignment {
+    justify-content: space-evenly;
+  }
+
+  .solar-system__horizontal-alignment .sun {
+    width: 240px;
+  }
+
+  #mercury-box {
+    width: 110px;
+  }
+
+  #venus-box {
+    width: 130px;
+  }
+
+  #earth-box {
+    width: 150px;
+  }
+
+  #mars-box {
+    width: 145px;
+  }
+
+  #jupiter-box {
+    width: 155px;
+  }
+
+  #saturn-box {
+    width: 210px;
+  }
+
+  #uranus-box {
+    width: 128px;
+  }
+
+  #neptune-box {
+    width: 143px;
+  }
+}

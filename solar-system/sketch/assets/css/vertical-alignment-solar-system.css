@@ -31,7 +31,7 @@
   position: relative;
 }
 
-.solar-system__vertical-alignment #sun {
+.solar-system__vertical-alignment .sun {
   width: 50px;
 }
 
@@ -176,7 +176,7 @@
 }
 
 @media (min-width: 768px), (min-height: 768px) {
-  .solar-system__vertical-alignment #sun {
+  .solar-system__vertical-alignment .sun {
     width: 120px;
   }
 
@@ -273,7 +273,7 @@
 }
 
 @media (min-width: 1300px) and (min-height: 633px) {
-  .solar-system__vertical-alignment #sun {
+  .solar-system__vertical-alignment .sun {
     width: 120px;
   }
 
@@ -370,7 +370,7 @@
 }
 
 @media (min-width: 1450px), (min-height: 1025px) {
-  .solar-system__vertical-alignment #sun {
+  .solar-system__vertical-alignment .sun {
     width: 140px;
   }
 

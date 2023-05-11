@@ -7,13 +7,39 @@
 :root {
   --rotation-time: 25s;
   --translation-time: 10s;
+  --floating-time: 5s;
+  /* default shadow color */
+  --planet-shadow-color: #ccc;
 }
 
 body {
   background: black url('../img/space.webp') center no-repeat fixed;
   background-size: cover;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.toggleSolarSystemAlignmentButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  max-width: 60px;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+
+.toggleSolarSystemAlignmentButton[data-alignmentMode='horizontal'] {
+  transform: rotate(45deg);
+}
+
+.toggleSolarSystemAlignmentButton[data-alignmentMode='vertical'] {
+  transform: rotate(-45deg);
+}
+
+.toggleSolarSystemAlignmentButton img {
   width: 100%;
 }
 
@@ -28,7 +54,7 @@ body {
   width: 100%;
 }
 
-@keyframes sunRotation {
+@keyframes rotation360 {
   0% {
     transform: rotate(0deg);
   }
@@ -37,11 +63,14 @@ body {
   }
 }
 
-#sun {
-  animation: sunRotation var(--rotation-time) linear infinite;
+.sun {
+  animation: rotation360 var(--rotation-time) linear infinite;
   filter: drop-shadow(0 0 12px #bb0);
   display: block;
   position: relative;
   z-index: 10;
-  color: #89cde6;
+}
+
+.hide {
+  display: none;
 }
