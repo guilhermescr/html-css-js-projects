@@ -80,6 +80,7 @@
   left: -35%;
   position: absolute;
   top: -35%;
+  z-index: -1;
 }
 
 #moon-box-full-moon {
@@ -119,7 +120,7 @@
 }
 
 #uranus-box img {
-  --floating-time: 15s;
+  --floating-time: 6s;
   --planet-shadow-color: #3290ac;
 }
 
@@ -147,6 +148,11 @@
 
   #earth-box {
     width: 70px;
+  }
+
+  #moon-box {
+    left: -50%;
+    top: -50%;
   }
 
   #mars-box {

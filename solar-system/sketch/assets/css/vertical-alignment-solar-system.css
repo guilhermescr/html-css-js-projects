@@ -36,7 +36,7 @@
 }
 
 .vertical-alignment__circle-axis {
-  animation: fullTranslation var(--rotation-time) linear infinite;
+  animation: fullTranslation var(--translation-time) linear infinite;
   border-style: solid;
   border-width: 2px;
   border-radius: 50%;
@@ -47,13 +47,14 @@
 }
 
 .vertical-alignment__circle-axis img {
+  animation: fullRotation var(--rotation-time) linear infinite;
   position: absolute;
   top: 10px;
   z-index: 10;
 }
 
 #mercury-axis {
-  --rotation-time: 40s;
+  --translation-time: 40s;
   border-color: #747373;
   height: 90px;
   width: 90px;
@@ -61,13 +62,12 @@
 }
 
 #mercury-axis img {
-  --translation-time: 20s;
-  animation: fullRotation var(--translation-time) linear infinite;
+  --rotation-time: 35s;
   width: 15px;
 }
 
 #venus-axis {
-  --rotation-time: 50s;
+  --translation-time: 50s;
   border-color: #bd6b00;
   height: 120px;
   width: 120px;
@@ -75,14 +75,13 @@
 }
 
 #venus-axis img {
-  --translation-time: 30s;
-  animation: fullRotation var(--translation-time) linear infinite;
+  --rotation-time: 45s;
   top: 15px;
   width: 20px;
 }
 
 #earth-axis {
-  --rotation-time: 25s;
+  --translation-time: 25s;
   border-color: #02722d;
   height: 150px;
   width: 150px;
@@ -90,12 +89,13 @@
 }
 
 #earth-axis img {
+  --rotation-time: 28s;
   top: 20px;
   width: 23px;
 }
 
 #moon-axis {
-  --translation-time: 5s;
+  --translation-time: 8s;
   animation: fullTranslation var(--translation-time) linear infinite;
   border-radius: 50%;
   position: absolute;
@@ -111,7 +111,7 @@
 }
 
 #mars-axis {
-  --rotation-time: 35s;
+  --translation-time: 35s;
   border-color: #8d4a2d;
   height: 180px;
   width: 180px;
@@ -119,12 +119,13 @@
 }
 
 #mars-axis img {
+  --rotation-time: 30s;
   top: 36px;
   width: 18px;
 }
 
 #jupiter-axis {
-  --rotation-time: 12s;
+  --translation-time: 12s;
   border-color: #816c50;
   height: 210px;
   width: 210px;
@@ -132,12 +133,13 @@
 }
 
 #jupiter-axis img {
+  --rotation-time: 18s;
   top: 35px;
   width: 28px;
 }
 
 #saturn-axis {
-  --rotation-time: 17s;
+  --translation-time: 17s;
   border-color: #9c8b75;
   height: 240px;
   width: 240px;
@@ -145,12 +147,13 @@
 }
 
 #saturn-axis img {
+  --rotation-time: 20s;
   top: 50px;
   width: 25px;
 }
 
 #uranus-axis {
-  --rotation-time: 25s;
+  --translation-time: 25s;
   border-color: #add8e6;
   height: 270px;
   width: 270px;
@@ -158,12 +161,13 @@
 }
 
 #uranus-axis img {
+  --rotation-time: 26s;
   top: 75px;
   width: 18px;
 }
 
 #neptune-axis {
-  --rotation-time: 22s;
+  --translation-time: 22s;
   border-color: #4b70dd;
   height: 300px;
   width: 300px;
@@ -171,6 +175,7 @@
 }
 
 #neptune-axis img {
+  --rotation-time: 24s;
   top: 82px;
   width: 20px;
 }

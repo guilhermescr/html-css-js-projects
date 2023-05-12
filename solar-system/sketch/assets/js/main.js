@@ -9,10 +9,10 @@ const HORIZONTAL_ALIGNMENT_CONTAINER = document.querySelector(
 );
 
 function toggleAlignmentMode() {
-  const currentMode = TOGGLE_ALIGNMENT_MODE_BUTTON.dataset.alignmentMode;
+  const { alignment_mode } = TOGGLE_ALIGNMENT_MODE_BUTTON.dataset;
 
-  TOGGLE_ALIGNMENT_MODE_BUTTON.dataset.alignmentMode =
-    currentMode === 'horizontal' ? 'vertical' : 'horizontal';
+  TOGGLE_ALIGNMENT_MODE_BUTTON.dataset.alignment_mode =
+    alignment_mode === 'horizontal' ? 'vertical' : 'horizontal';
 
   VERTICAL_ALIGNMENT_CONTAINER.classList.toggle('hide');
   HORIZONTAL_ALIGNMENT_CONTAINER.classList.toggle('hide');

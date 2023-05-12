@@ -18,10 +18,15 @@
   <body>
     <button
       class="toggleSolarSystemAlignmentButton"
-      data-alignmentMode="horizontal"
+      data-alignment_mode="horizontal"
     >
       <img src="assets/img/rocket.svg" alt="Rocket Icon" />
     </button>
+
+    <h1 id="title">
+      <span>Solar</span>
+      <span>System</span>
+    </h1>
 
     <main id="solar-system">
       <section class="solar-system__vertical-alignment hide">
@@ -69,47 +74,89 @@
       </section>
 
       <section class="solar-system__horizontal-alignment">
-        <img class="sun" src="assets/img/sun.svg" alt="Image of a Sun" />
+        <img
+          class="sun"
+          src="assets/img/sun.svg"
+          alt="Image of a Sun"
+          title="Sun"
+        />
 
         <div class="planet-container" id="mercury-box">
-          <img src="assets/img/mercury.svg" alt="Mercury Planet" />
+          <img
+            src="assets/img/mercury.svg"
+            alt="Mercury Planet"
+            title="Mercury Planet"
+          />
         </div>
 
         <div class="planet-container" id="venus-box">
-          <img src="assets/img/venus.svg" alt="Venus Planet" />
+          <img
+            src="assets/img/venus.svg"
+            alt="Venus Planet"
+            title="Venus Planet"
+          />
         </div>
 
         <div class="planet-container" id="earth-box">
-          <img src="assets/img/earth.svg" alt="Earth Planet" />
+          <img
+            src="assets/img/earth.svg"
+            alt="Earth Planet"
+            title="Earth Planet"
+          />
           <div id="moon-box">
             <img
               id="moon-box-full-moon"
               src="assets/img/full-moon.svg"
               alt="Full Moon"
+              title="Full Moon"
             />
           </div>
         </div>
 
         <div class="planet-container" id="mars-box">
-          <img src="assets/img/mars.svg" alt="Mars Planet" />
+          <img
+            src="assets/img/mars.svg"
+            alt="Mars Planet"
+            title="Mars Planet"
+          />
         </div>
 
         <div class="planet-container" id="jupiter-box">
-          <img src="assets/img/jupiter.svg" alt="Jupiter Planet" />
+          <img
+            src="assets/img/jupiter.svg"
+            alt="Jupiter Planet"
+            title="Jupiter Planet"
+          />
         </div>
 
         <div class="planet-container" id="saturn-box">
-          <img src="assets/img/saturn.svg" alt="Saturn Planet" />
+          <img
+            src="assets/img/saturn.svg"
+            alt="Saturn Planet"
+            title="Saturn Planet"
+          />
         </div>
 
         <div class="planet-container" id="uranus-box">
-          <img src="assets/img/uranus.svg" alt="Uranus Planet" />
+          <img
+            src="assets/img/uranus.svg"
+            alt="Uranus Planet"
+            title="Uranus Planet"
+          />
         </div>
 
         <div class="planet-container" id="neptune-box">
-          <img src="assets/img/neptune.svg" alt="Neptune Planet" />
+          <img
+            src="assets/img/neptune.svg"
+            alt="Neptune Planet"
+            alt="Neptune Planet"
+          />
         </div>
       </section>
     </main>
+
+    <p id="owner">Owner: @devguiga</p>
+
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
