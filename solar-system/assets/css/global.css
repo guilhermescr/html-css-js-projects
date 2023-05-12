@@ -6,11 +6,9 @@
 }
 
 :root {
-  /* come back */
   --rotation-time: 10s;
   --translation-time: 25s;
   --floating-time: 5s;
-  /* default shadow color */
   --planet-shadow-color: #ccc;
 }
 
@@ -29,7 +27,7 @@ body {
   cursor: pointer;
   max-width: 60px;
   position: absolute;
-  right: 25px;
+  right: 15px;
   top: 15px;
   transition: transform 0.15s ease-out;
   z-index: 1;
@@ -48,9 +46,6 @@ body {
 }
 
 @keyframes titleAnimation {
-  0% {
-    left: -200%;
-  }
   15% {
     left: 50%;
     transform: translateX(-50%);
@@ -71,6 +66,7 @@ body {
   position: absolute;
   text-align: center;
   top: 40px;
+  z-index: 100;
 }
 
 #title span:nth-child(1) {
@@ -89,6 +85,16 @@ body {
   z-index: 1;
 }
 
+@keyframes rotation360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+
+  }
+}
+
 #solar-system {
   height: 100%;
   width: 100%;
@@ -101,21 +107,16 @@ body {
   width: 100%;
 }
 
-@keyframes rotation360 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .sun {
   animation: rotation360 var(--rotation-time) linear infinite;
-  filter: drop-shadow(0 0 12px #bb0);
   display: block;
+  filter: drop-shadow(0 0 12px #bb0);
   position: relative;
   z-index: 10;
+}
+
+img {
+  width: 60px;
 }
 
 .hide {

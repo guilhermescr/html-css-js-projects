@@ -42,7 +42,7 @@
 
 .planet-container > img:not(#moon-box-full-moon) {
   animation: floatingMovement var(--floating-time) linear infinite alternate;
-  filter: drop-shadow(0 0 3px var(--planet-shadow-color));
+  filter: drop-shadow(0 0 10px var(--planet-shadow-color));
   width: 100%;
 }
 

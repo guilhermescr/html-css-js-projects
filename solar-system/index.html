@@ -13,7 +13,12 @@
       rel="stylesheet"
       href="assets/css/horizontal-alignment-solar-system.css"
     />
-    <title>Solar System Sketch</title>
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Solar System</title>
   </head>
   <body>
     <button
@@ -29,7 +34,7 @@
     </h1>
 
     <main id="solar-system">
-      <section class="solar-system__vertical-alignment hide">
+      <section class="solar-system__vertical-alignment">
         <div class="vertical-alignment__circle-axis" id="mercury-axis">
           <img src="assets/img/mercury.svg" alt="Mercury Planet" />
         </div>
@@ -43,9 +48,9 @@
 
           <div id="moon-axis">
             <img
-              id="full-moon"
               src="assets/img/full-moon.svg"
-              alt="Earth's Moon"
+              alt="Full Moon"
+              id="full-moon"
             />
           </div>
         </div>
@@ -70,16 +75,11 @@
           <img src="assets/img/neptune.svg" alt="Neptune Planet" />
         </div>
 
-        <img class="sun" src="assets/img/sun.svg" alt="Image of a Sun" />
+        <img src="assets/img/sun.svg" alt="Image of a Sun" class="sun" />
       </section>
 
-      <section class="solar-system__horizontal-alignment">
-        <img
-          class="sun"
-          src="assets/img/sun.svg"
-          alt="Image of a Sun"
-          title="Sun"
-        />
+      <section class="solar-system__horizontal-alignment hide">
+        <img src="assets/img/sun.svg" alt="Image of a Sun" class="sun" />
 
         <div class="planet-container" id="mercury-box">
           <img
@@ -103,11 +103,12 @@
             alt="Earth Planet"
             title="Earth Planet"
           />
+
           <div id="moon-box">
             <img
-              id="moon-box-full-moon"
               src="assets/img/full-moon.svg"
               alt="Full Moon"
+              id="moon-box-full-moon"
               title="Full Moon"
             />
           </div>
@@ -149,7 +150,7 @@
           <img
             src="assets/img/neptune.svg"
             alt="Neptune Planet"
-            alt="Neptune Planet"
+            title="Neptune Planet"
           />
         </div>
       </section>

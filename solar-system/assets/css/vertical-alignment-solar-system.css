@@ -1,27 +1,9 @@
-/* Don't try this :)
-0% {
-    transform: rotate(0deg) translate(-50%, -50%);
-  }
-  100% {
-    transform: rotate(360deg) translate(-50%, -50%);
-  }
-*/
-
 @keyframes fullTranslation {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
   }
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-@keyframes fullRotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 
@@ -47,7 +29,7 @@
 }
 
 .vertical-alignment__circle-axis img {
-  animation: fullRotation var(--rotation-time) linear infinite;
+  animation: rotation360 var(--rotation-time) linear infinite;
   position: absolute;
   top: 10px;
   z-index: 10;
@@ -85,7 +67,7 @@
   border-color: #02722d;
   height: 150px;
   width: 150px;
-  z-index: 6;
+  z-index: 7;
 }
 
 #earth-axis img {
@@ -98,9 +80,9 @@
   --translation-time: 8s;
   animation: fullTranslation var(--translation-time) linear infinite;
   border-radius: 50%;
-  position: absolute;
   height: 80px;
   left: 10px;
+  position: absolute;
   top: 32px;
   width: 80px;
 }
